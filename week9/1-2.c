@@ -19,7 +19,7 @@ int main()
    t=200;
    s=300;
    printf(" after pid=%d:&g=%d,&t=%d,&s=%d\n",getpid(),g,t,s);
- slee(3);
+ sleep(3);
  _exit(0);
  }
  else
