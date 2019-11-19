@@ -1,0 +1,25 @@
+#include"my.h"
+int main()
+{
+ pid_t pid;
+ pid=fork();
+ if(pid<0)
+{
+ perror("failed fork!\n");
+ return -1;
+}
+ else if(pid==0)
+{
+ printf("child %d is running!\n",getpid());
+ printf("chiod will exit!\n");
+ while(1);
+ exit(120);
+}
+ else
+{
+ printf("parent wating child %d to exit",pid);
+ sleep(100);
+printf("parent %d is running!\n",getpid());
+ return 0;
+}
+}
