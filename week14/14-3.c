@@ -5,7 +5,7 @@ void fun(void *arg)
 }
 int main()
 {
-  pthread_t tid;
+  pthread_t tid;//dingyiyigexiancheng
  int ret;
  ret=pthread_create(&tid,NULL,(void *(*)())fun,NULL);
  if(ret!=0)
